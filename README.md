@@ -1,2 +1,2 @@
 # shopee-customer-feedback-analytics
-Power bank feedback
+Power bank feedback in Vietnamese
