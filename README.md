@@ -1,11 +1,22 @@
-# shopee-customer-feedback-analytics
+# Phân tích các yếu tố tác động đến sự hài lòng của khách hàng trên sàn thương mại điện tử thông qua khai phá dữ liệu bình luận
 
-## 🚀 Tổng quan kiến trúc
-Hệ thống này tự động xử lý hàng vạn bình luận phi cấu trúc của khách hàng đối với ngành hàng sạc dự phòng. Hệ thống thực hiện bóc tách từng câu phức thành các khía cạnh độc lập (Dung lượng, Tốc độ sạc, Thiết kế...), sử dụng **PhoBERT** để phân loại cảm xúc và **Gemini AI** để đề xuất chiến lược vận hành cho nhà quản lý.
+Hệ thống được thiết kế để xử lý hàng vạn dòng bình luận phi cấu trúc của khách hàng đối với 10 thương hiệu sạc dự phòng trên Shopee, từ đó trực quan hóa điểm yếu sản phẩm và sinh các chiến lược vận hành thông qua LLM.
 
-## ⚙️ Yêu cầu hệ thống
-* **Ngôn ngữ:** Python 3.9+
-* **Thư viện cốt lõi:** `pandas`, `openpyxl`, `underthesea`, `transformers`, `streamlit`, `plotly`, `google-genai`.
-* **Cài đặt môi trường:**
-  ```bash
-  pip install -r requirements.txt
+---
+
+## 🛠 Thống số kỹ thuật & Công nghệ sử dụng
+* **Ngôn ngữ lập trình:** Python 3.9+
+* **Giao diện & Trực quan hóa:** Streamlit, Plotly
+* **Xử lý ngôn ngữ tự nhiên (NLP):**
+  * Tách từ tiếng Việt: `underthesea`
+  * Mô hình phân loại cảm xúc: `PhoBERT-base-vietnamese-sentiment` (via Hugging Face `transformers`)
+* **AI Tạo sinh (GenAI):** Google Gemini 2.5 Flash API (sử dụng thư viện đa luồng `concurrent.futures` để tối ưu độ trễ)
+
+---
+
+## ⚙️ Hướng dẫn cài đặt
+
+**Bước 1: Clone kho lưu trữ**
+```bash
+git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+cd your-repo-name
