@@ -10,13 +10,6 @@ Hệ thống được thiết kế để xử lý hàng vạn dòng bình luận
 * **Xử lý ngôn ngữ tự nhiên (NLP):**
   * Tách từ tiếng Việt: `underthesea`
   * Mô hình phân loại cảm xúc: `PhoBERT-base-vietnamese-sentiment` (via Hugging Face `transformers`)
-* **AI Tạo sinh (GenAI):** Google Gemini 2.5 Flash API (sử dụng thư viện đa luồng `concurrent.futures` để tối ưu độ trễ)
+* **AI Tạo sinh (GenAI):** Google Gemini 2.5 Flash API
 
 ---
-
-## ⚙️ Hướng dẫn cài đặt
-
-**Bước 1: Clone kho lưu trữ**
-```bash
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-cd your-repo-name
